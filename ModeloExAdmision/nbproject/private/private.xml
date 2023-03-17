@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/OneDrive%20-%20Estudiantes%20ITCR/Escritorio/TEC/Cusos%20-%20Semestre%205/Diseño%20de%20Software/Actividades/A2%20Segunda%20Parte/ModeloExAdmision/src/view/ModeloExAdmision.java</file>
+            <file>file:/D:/GitHub/DiseñoSoftware/A2-Segunda-Parte/ModeloExAdmision/src/view/ModeloExAdmision.java</file>
+            <file>file:/D:/GitHub/DiseñoSoftware/A2-Segunda-Parte/ModeloExAdmision/src/controller/Controlador.java</file>
+            <file>file:/D:/GitHub/DiseñoSoftware/A2-Segunda-Parte/ModeloExAdmision/src/controller/AdmFormularios.java</file>
+            <file>file:/D:/GitHub/DiseñoSoftware/A2-Segunda-Parte/ModeloExAdmision/src/controller/DAO/SingletonDAO.java</file>
         </group>
     </open-files>
 </project-private>
