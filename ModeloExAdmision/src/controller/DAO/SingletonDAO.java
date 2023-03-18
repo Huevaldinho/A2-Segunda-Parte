@@ -170,4 +170,38 @@ public class SingletonDAO {
         }
         return false;
     }
+
+    /**
+     * Metodo para settear la nota de un examen de admision.
+     *
+     * @param idFormulario int: Id del formulario al cual se le asignara la
+     * nota.
+     * @param nota int: Nota obtenida en el examen de admision.
+     */
+    public void setNotaExamenFormulario(int idFormulario, int nota) {
+
+        for (int i = 0; i < tablaFormularios.size(); i++) {
+            if (tablaFormularios.get(i).getNumero() == idFormulario) {
+                tablaFormularios.get(i).getDetalleExamen().setPuntajeObtenido(nota);
+                break;
+            }
+        }
+    }
+
+    /**
+     * Metodo para actualizar el estado de un formulario.
+     *
+     * @param idFormulario int: Numero de formulario.
+     * @param estado TEstadoSolicitante: Estado que se seteara en el formulario.
+     * @return true si logra actualizar el formulario | false si no lo logra.
+     */
+    public boolean actualizarFormulario(int idFormulario, TEstadoSolicitante estado) {
+        for (int i = 0; i < tablaFormularios.size(); i++) {
+            if (tablaFormularios.get(i).getNumero() == idFormulario) {
+                tablaFormularios.get(i).setEstado(estado);
+                return true;
+            }
+        }
+        return false;
+    }
 }

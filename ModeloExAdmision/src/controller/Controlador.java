@@ -84,8 +84,18 @@ public class Controlador {
     public void generarCitas() {
         generadorCitas.asignarCitasASolicitantes();
     }
-    public void notificarCitas(){
+
+    public void notificarCitas() {
         generadorCitas.notificarFormulario();
+    }
+
+    /**
+     * Ejercicio 6. Simular aplicacion de examen.
+     */
+    public void simulacionAplicacionExamen() {
+        int minExamen = 0;
+        int maxExamen = getPuntajeGeneralAdmision();
+        admFormularios.simularAplicacionExamen(minExamen, maxExamen);
     }
 
 }

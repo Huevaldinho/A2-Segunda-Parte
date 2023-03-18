@@ -9,6 +9,10 @@ import controller.Controlador;
 import controller.DAO.SingletonDAO;
 import controller.DTOFormulario;
 import controller.IParametros;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+import model.Carrera;
 import model.Configuracion;
 import model.DireccionPCD;
 
@@ -92,10 +96,69 @@ public class ModeloExAdmision {
         Configuracion.getInstance().guardarProperties();
     }
 
+    //Ejercicio 5. Generar y notificar citas.
     public static void definirCitasYNotificar() {
         System.out.println("\n\n Ejercicio 5. Generar y notificar citas de examen." + "\n");
         elCtrl.generarCitas();
         elCtrl.notificarCitas();
+    }
+
+    //Ejercicio 6. Simular aplicacion examen.
+    public static void simularAplicacionExamen() {
+        System.out.println("\n\n Ejercicio 6. Simulacion de aplicacion de examen.\n");
+        elCtrl.simulacionAplicacionExamen();
+    }
+
+    //Generar formularios aleatorios.
+    public static void generarFormulariosAleatorios() {
+        int cantidadFormulariosAgenerar = generarNumeroAleatorio(50, 100);
+        int idSolic;
+        String nombreSolic;
+        String correoSolic;
+        String celularSolic;
+        String colegioSolic;
+        DireccionPCD dirSolic = SingletonDAO.getInstance().getPCD(4);
+        String detalleDir;
+        String carreraSolic;
+        String sedeSolic;
+        List<Carrera> carreras = elCtrl.getCarreras();
+
+        int item;
+        for (int i = 1; i <= cantidadFormulariosAgenerar; i++) {
+            idSolic = i;
+            nombreSolic = "Solicitante " + idSolic;
+            correoSolic = nombreSolic + "@gmail.com";
+            colegioSolic = "Colegio del " + nombreSolic;
+            detalleDir = "Direccion del " + nombreSolic;
+            celularSolic = "Telefono Solicitante: " + nombreSolic;
+            item = generarNumeroAleatorio(0, carreras.size() - 1);
+            carreraSolic = carreras.get(item).getCodigo();
+            sedeSolic = carreras.get(item).getSede().getCodigo();
+            DTOFormulario elDTO = new DTOFormulario(idSolic, nombreSolic,
+                    correoSolic, celularSolic, colegioSolic,
+                    dirSolic, detalleDir, carreraSolic, sedeSolic);
+
+            boolean resultado = elCtrl.registrarFormulario(elDTO);
+            System.out.println(resultado ? "Formulario registrado y es el numero: "
+                    + elCtrl.getFormulario(idSolic) : "No pudo registrar el formulario");
+        }
+    }
+
+    /**
+     * Metodo para genera aleatoriamente un numero entre el minimo y maximo
+     * dado. Ambos extremos del rango estan incluidos.
+     *
+     * @param minimo int: Rango minimo del numero.
+     * @param maximo int: Rango maximo del numero.
+     * @return
+     */
+    public static int generarNumeroAleatorio(int minimo, int maximo) {
+        // Crear un objeto Random
+        Random random = new Random();
+        // Generar un número aleatorio entre el valor mínimo y el valor máximo (ambos incluidos)
+        int numeroAleatorio = random.nextInt(maximo - minimo + 1) + minimo;
+        // Devolver el número aleatorio generado
+        return numeroAleatorio;
     }
 
     public static void main(String[] args) {
@@ -108,8 +171,13 @@ public class ModeloExAdmision {
         System.out.println("En demoFormulario");
         demoFormulario();
 
+        //Pruebas
+        generarFormulariosAleatorios();
+
         //Ejercicio 5. Generar y notificar citas de examen.
         definirCitasYNotificar();
+        //Ejercicio 6. Aplicacion del examen de admision.
+        simularAplicacionExamen();
 
     }
 

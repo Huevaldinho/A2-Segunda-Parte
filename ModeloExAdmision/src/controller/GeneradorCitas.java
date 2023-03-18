@@ -51,6 +51,7 @@ public class GeneradorCitas {
             }
         }
     }
+
     /**
      * Metodo para notificar a los solicitantes su fecha y lugar de aplicacion
      * del examen de admision.
@@ -58,16 +59,18 @@ public class GeneradorCitas {
     public void notificarFormulario() {
         int anhoActual = Year.now().getValue();
         ArrayList<FormularioSolicitante> tablaFormularios = admFormulario.getFormularios(TEstadoSolicitante.SOLICITANTE);
-        String emisor = "Instituto Tecnológico de Costa Rica le informa a: ", destinatario, asunto = "Informacion sobre cita del examen de admision:";
+        String emisor = "Instituto Tecnológico de Costa Rica le informa a: ";
+        String destinatario;
+        String asunto;
 
         for (int i = 0; i < tablaFormularios.size(); i++) {
             FormularioSolicitante actualForm = tablaFormularios.get(i);
             if (actualForm.getFecha().get(Calendar.YEAR) >= anhoActual
                     && actualForm.getDetalleExamen().getCitaExamen() != null) {
                 destinatario = String.valueOf(tablaFormularios.get(i).getNombreSolic())
-                        + "\nNumero de formulario: " + String.valueOf(actualForm.getNumero());
+                        + " Numero de formulario: " + String.valueOf(actualForm.getNumero());
 
-                asunto += String.valueOf(actualForm.getDetalleExamen());
+                asunto = "Informacion sobre cita del examen de admision:" + String.valueOf(actualForm.getDetalleExamen());
 
                 comunicador.enviarCorreo(emisor, destinatario, asunto);
             }
