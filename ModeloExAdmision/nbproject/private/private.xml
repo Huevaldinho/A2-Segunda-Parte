@@ -4,7 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/GitHub/DiseñoSoftware/A2-Segunda-Parte/ModeloExAdmision/src/view/ModeloExAdmision.java</file>
+            <file>file:/D:/GitHub/DiseñoSoftware/A2-Segunda-Parte/ModeloExAdmision/src/controller/GeneradorCitas.java</file>
             <file>file:/D:/GitHub/DiseñoSoftware/A2-Segunda-Parte/ModeloExAdmision/src/controller/Controlador.java</file>
+            <file>file:/D:/GitHub/DiseñoSoftware/A2-Segunda-Parte/ModeloExAdmision/src/model/FormularioSolicitante.java</file>
+            <file>file:/D:/GitHub/DiseñoSoftware/A2-Segunda-Parte/ModeloExAdmision/src/model/DatosExamen.java</file>
+            <file>file:/D:/GitHub/DiseñoSoftware/A2-Segunda-Parte/ModeloExAdmision/src/controller/UtilitarioComunicacion.java</file>
             <file>file:/D:/GitHub/DiseñoSoftware/A2-Segunda-Parte/ModeloExAdmision/src/controller/AdmFormularios.java</file>
             <file>file:/D:/GitHub/DiseñoSoftware/A2-Segunda-Parte/ModeloExAdmision/src/controller/DAO/SingletonDAO.java</file>
         </group>

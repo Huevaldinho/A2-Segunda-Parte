@@ -17,6 +17,7 @@ import model.DatosExamen;
 import model.DireccionPCD;
 import model.FormularioSolicitante;
 import model.Sede;
+import model.TEstadoSolicitante;
 import model.TGrado;
 
 /**
@@ -144,100 +145,29 @@ public class SingletonDAO {
         return true;
     }
 
-    /**
-     * Ejercicio 5. Definir y notificar citas. Metodo para obtener los
-     * formularios que se les asignaron cita para este ahno.
-     *
-     * @return ArrayList FormularioSolicitante: Formularios a los que se le
-     * generaron las citas de examen para este anho.
-     */
-    public ArrayList<FormularioSolicitante> notificarCitas() {
-        //Filtrar los formularios de este ano, que tengan DatosExamen.
-        int anhoActual = Year.now().getValue();
-        ArrayList<FormularioSolicitante> citasGeneradas = new ArrayList();
+    public ArrayList<FormularioSolicitante> getFormularios(TEstadoSolicitante estado) {
+        ArrayList<FormularioSolicitante> formulariosFiltradosPorEstado = new ArrayList();
         for (int i = 0; i < tablaFormularios.size(); i++) {
-            //) Ano formulario iterado
-            if (tablaFormularios.get(i).getFecha().get(Calendar.YEAR) >= anhoActual
-                    && tablaFormularios.get(i).getDetalleExamen().getCitaExamen() != null) {
-                //Si el formulario es para este anho y no tiene detalle examen.
-                citasGeneradas.add(tablaFormularios.get(i));
-
+            if (tablaFormularios.get(i).getEstado() == estado) {
+                formulariosFiltradosPorEstado.add(tablaFormularios.get(i));
             }
         }
-        return citasGeneradas;
+        return formulariosFiltradosPorEstado;
     }
 
-    /**
-     * Metodo para generar aleatoriemente las citas del examen de admision.
-     *
-     * @return true si logra generarlas | false si no lo logra.
-     */
-    public boolean generarCitas() {
-        //Filtrar los formularios de este anho y randomear los DatosExamen.
-        boolean resultado = false;
-        int anhoActual = Year.now().getValue();
+    public ArrayList<CentroAplicacion> getCentrosAplicacion() {
+        return tablaCentros;
+    }
+
+    public boolean actualizarFormulario(int numeroFormulario,
+            Calendar fechaExamen, CentroAplicacion lugar) {
         for (int i = 0; i < tablaFormularios.size(); i++) {
-            //) Ano formulario iterado
-            if (tablaFormularios.get(i).getFecha().get(Calendar.YEAR) >= anhoActual
-                    && tablaFormularios.get(i).getDetalleExamen().getCitaExamen() == null) {
-                //Si el formulario es para este anho y no tiene detalle examen.
-                tablaFormularios.get(i).setDetalleExamen(generarDatosExamenRandom());
-                resultado = true;
+            if (tablaFormularios.get(i).getNumero() == numeroFormulario) {
+                tablaFormularios.get(i).getDetalleExamen().setCitaExamen(fechaExamen);
+                tablaFormularios.get(i).getDetalleExamen().setLugarExamen(lugar);
+                return true;
             }
         }
-        return resultado;
-    }
-
-    public DatosExamen generarDatosExamenRandom() {
-        DatosExamen datosExamen = new DatosExamen();
-        datosExamen.setCitaExamen(generarFechaAleatoria());
-        datosExamen.setLugarExamen(generarCentroAplicacionAleatorio());
-        return datosExamen;
-    }
-
-    /**
-     * Metodo para generar una fecha random en los proximos 6 meses.
-     *
-     * @return Calendar: Fecha random en los proximos 6 meses.
-     */
-    public Calendar generarFechaAleatoria() {
-        // Obtener la fecha actual en un objeto Calendar
-        Calendar calendar = Calendar.getInstance();
-        // Generar un número aleatorio entre 1 y 180 (que representa el número de días dentro de los próximos 6 meses)
-        Random random = new Random();
-        int dias = random.nextInt(180) + 1;
-        // Añadir el número de días generados al objeto Calendar de la fecha actual
-        calendar.add(Calendar.DAY_OF_YEAR, dias);
-        // Devolver el objeto Calendar resultante
-        return calendar;
-    }
-
-    /**
-     * Metodo para generar un centro de aplicacion aleatorio.
-     *
-     * @return CentroAplicacion: Aleatorio.
-     */
-    public CentroAplicacion generarCentroAplicacionAleatorio() {
-        if (tablaCentros.isEmpty()) {
-            return null;
-        }
-        return tablaCentros.get(generarNumeroAleatorio(0, tablaCentros.size() - 1));
-    }
-
-    /**
-     * Metodo para genera aleatoriamente un numero entre el minimo y maximo
-     * dado. Ambos extremos del rango estan incluidos.
-     *
-     * @param minimo int: Rango minimo del numero.
-     * @param maximo int: Rango maximo del numero.
-     * @return
-     */
-    public int generarNumeroAleatorio(int minimo, int maximo) {
-        // Crear un objeto Random
-        Random random = new Random();
-        // Generar un número aleatorio entre el valor mínimo y el valor máximo (ambos incluidos)
-        int numeroAleatorio = random.nextInt(maximo - minimo + 1) + minimo;
-        // Devolver el número aleatorio generado
-        return numeroAleatorio;
+        return false;
     }
 }

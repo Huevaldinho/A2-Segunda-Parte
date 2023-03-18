@@ -7,7 +7,6 @@ package model;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 /**
  *
@@ -21,6 +20,7 @@ public class DatosExamen {
 
     public DatosExamen() {
     }
+    
 
     public Calendar getCitaExamen() {
         return citaExamen;

@@ -7,7 +7,6 @@ package controller;
 
 import java.util.List;
 import model.Carrera;
-import model.Configuracion;
 import model.FormularioSolicitante;
 import java.util.ArrayList;
 
@@ -20,6 +19,7 @@ public class Controlador {
     private AdmConfiguracion admConfig = new AdmConfiguracion();
     private AdmCarreras admCarreras = new AdmCarreras();
     private AdmFormularios admFormularios = new AdmFormularios();
+    private GeneradorCitas generadorCitas = new GeneradorCitas(admFormularios);
 
     public Controlador() {
     }
@@ -75,8 +75,17 @@ public class Controlador {
     }
 
     /*Ejercicio 5. Definir y notificar citas.*/
-    public ArrayList<FormularioSolicitante> generarCitas() {
-        return admFormularios.definirCitasYNotificar();
+    /**
+     * Metodo para generar y notificar las citas del examen de admision.
+     *
+     * En el modelo esta como si fuera private pero para efectos de la practica
+     * se utiliza como public.
+     */
+    public void generarCitas() {
+        generadorCitas.asignarCitasASolicitantes();
+    }
+    public void notificarCitas(){
+        generadorCitas.notificarFormulario();
     }
 
 }

@@ -6,10 +6,11 @@
 package controller;
 
 import controller.DAO.SingletonDAO;
+import java.util.ArrayList;
 import model.CentroAplicacion;
 import model.FormularioSolicitante;
 import java.util.Calendar;
-import java.util.ArrayList;
+import model.TEstadoSolicitante;
 
 /**
  *
@@ -47,38 +48,30 @@ public class AdmFormularios {
     }
 
     /**
-     * Ejercicio 5. Definir y notificar citas
      *
-     * @return ArrayList con los formularios que contienen las citas de examen
-     * generadas | null si no se logra generar.
+     * @param numeroFormulario int: Numero de formulario.
+     * @param fechaExamen Calendar: Fecha y hora del examen.
+     * @param lugar CentroAplicacion: Lugar donde se va a realizar el examen.
+     * @return true si logro registrar la cita del examen | false si no lo
+     * logro.
      */
-    public ArrayList<FormularioSolicitante> definirCitasYNotificar() {
-        if (SingletonDAO.getInstance().generarCitas()) {
-            return SingletonDAO.getInstance().notificarCitas();
-        }
-        //No logro generar citas.
-        return null;
+    public boolean registrarCitaExamen(int numeroFormulario, Calendar fechaExamen, CentroAplicacion lugar) {
+        return SingletonDAO.getInstance().actualizarFormulario(numeroFormulario, fechaExamen, lugar);
+    }
+
+    public ArrayList<FormularioSolicitante> getFormularios(TEstadoSolicitante estado) {
+        return SingletonDAO.getInstance().getFormularios(estado);
+    }
+
+    public ArrayList<CentroAplicacion> getCentrosAplicacion() {
+        return SingletonDAO.getInstance().getCentrosAplicacion();
     }
 
     /**
-     * Metodo para registrar la cita de un examen de admision para
-     *
-     * @param numero int: ?
-     * @param fechaExamen LocalDateTime: Fecha del examen.
-     * @param lugar CentroAplicacion: Lugar donde se realiza el examen.
-     * @return true si logra registrar la cita | false si no lo logra.
-     */
-    public boolean registrarCitaExamen(int numero, Calendar fechaExamen,
-            CentroAplicacion lugar) {
-        boolean resultadoRegistro = false;
-
-        return resultadoRegistro;
-
-    }
-
-    /**
-     *
+     * Ejercicio 6. Simular la aplicación de examen con ausentes y candidatos.
+     * Metodo para simular la aplicacion del examen de admision.
      */
     public void simularAplicacionExamen() {
+
     }
 }

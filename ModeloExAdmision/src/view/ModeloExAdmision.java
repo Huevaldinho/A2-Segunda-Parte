@@ -94,7 +94,8 @@ public class ModeloExAdmision {
 
     public static void definirCitasYNotificar() {
         System.out.println("\n\n Ejercicio 5. Generar y notificar citas de examen." + "\n");
-        System.out.println("Formularios: \n" + elCtrl.generarCitas());
+        elCtrl.generarCitas();
+        elCtrl.notificarCitas();
     }
 
     public static void main(String[] args) {

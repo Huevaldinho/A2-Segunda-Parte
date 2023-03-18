@@ -1304,57 +1304,6 @@
 										},
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAF7p074wJPgkKU=",
-											"_parent": {
-												"$ref": "AAAAAAF7d9zkSWR7i5o="
-											},
-											"model": {
-												"$ref": "AAAAAAF7p074lpPdZXA="
-											},
-											"font": "Arial;13;0",
-											"left": 733,
-											"top": 386,
-											"width": 559.60302734375,
-											"height": 13,
-											"text": "-generarCitas(): boolean",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAF7wW6mwwM5v3Q=",
-											"_parent": {
-												"$ref": "AAAAAAF7d9zkSWR7i5o="
-											},
-											"model": {
-												"$ref": "AAAAAAF7wW6mmAM2kOc="
-											},
-											"font": "Arial;13;0",
-											"left": 733,
-											"top": 401,
-											"width": 559.60302734375,
-											"height": 13,
-											"text": "+simulaciónAplicacionExamen(): void",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAF7woy2mk4gbbg=",
-											"_parent": {
-												"$ref": "AAAAAAF7d9zkSWR7i5o="
-											},
-											"model": {
-												"$ref": "AAAAAAF7woy2ek4dfkM="
-											},
-											"font": "Arial;13;0",
-											"left": 733,
-											"top": 416,
-											"width": 559.60302734375,
-											"height": 13,
-											"text": "+definirSituacionCandidatos(): void",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAF7wpiRXHPskqg=",
 											"_parent": {
 												"$ref": "AAAAAAF7d9zkSWR7i5o="
@@ -1364,7 +1313,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 733,
-											"top": 431,
+											"top": 386,
 											"width": 559.60302734375,
 											"height": 13,
 											"text": "+getFormulariosPorCarrera_Solicitante(codigoCarrera: String): Collection<FormularioSolicitante>",
@@ -1381,10 +1330,61 @@
 											},
 											"font": "Arial;13;0",
 											"left": 733,
-											"top": 446,
+											"top": 401,
 											"width": 559.60302734375,
 											"height": 13,
 											"text": "+getFormulariosPorCarrera_Estado(codigoCarrera: String): Collection<FormularioSolicitante>",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF7p074wJPgkKU=",
+											"_parent": {
+												"$ref": "AAAAAAF7d9zkSWR7i5o="
+											},
+											"model": {
+												"$ref": "AAAAAAF7p074lpPdZXA="
+											},
+											"font": "Arial;13;0",
+											"left": 733,
+											"top": 416,
+											"width": 559.60302734375,
+											"height": 13,
+											"text": "-generarCitas(): Collection<FormularioSolicitante>",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF7wW6mwwM5v3Q=",
+											"_parent": {
+												"$ref": "AAAAAAF7d9zkSWR7i5o="
+											},
+											"model": {
+												"$ref": "AAAAAAF7wW6mmAM2kOc="
+											},
+											"font": "Arial;13;0",
+											"left": 733,
+											"top": 431,
+											"width": 559.60302734375,
+											"height": 13,
+											"text": "+simulaciónAplicacionExamen(): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF7woy2mk4gbbg=",
+											"_parent": {
+												"$ref": "AAAAAAF7d9zkSWR7i5o="
+											},
+											"model": {
+												"$ref": "AAAAAAF7woy2ek4dfkM="
+											},
+											"font": "Arial;13;0",
+											"left": 733,
+											"top": 446,
+											"width": 559.60302734375,
+											"height": 13,
+											"text": "+definirSituacionCandidatos(): void",
 											"horizontalAlignment": 0
 										}
 									],
@@ -4546,23 +4546,6 @@
 										},
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAGG8MWbBnmIOSI=",
-											"_parent": {
-												"$ref": "AAAAAAF7eRa0/ui2EEM="
-											},
-											"model": {
-												"$ref": "AAAAAAGG8MWa9Xl5W0c="
-											},
-											"font": "Arial;13;0",
-											"left": 1077,
-											"top": 1030,
-											"width": 487.36669921875,
-											"height": 13,
-											"text": "+getFormulariosAnhoActual(): Collection<FormularioSolicitante>",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAF7pkPa3Rwsn2g=",
 											"_parent": {
 												"$ref": "AAAAAAF7eRa0/ui2EEM="
@@ -4572,7 +4555,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1077,
-											"top": 1045,
+											"top": 1030,
 											"width": 487.36669921875,
 											"height": 13,
 											"text": "+getCarreras(codigoSede: String): Collection <Carrera>",
@@ -4589,7 +4572,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1077,
-											"top": 1060,
+											"top": 1045,
 											"width": 487.36669921875,
 											"height": 13,
 											"text": "+getCarrera(codigoCarrera: String): Carrera",
@@ -4606,7 +4589,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1077,
-											"top": 1075,
+											"top": 1060,
 											"width": 487.36669921875,
 											"height": 13,
 											"text": "-registrarFormulario(elForm: FormularioSolicitante): boolean",
@@ -4623,7 +4606,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1077,
-											"top": 1090,
+											"top": 1075,
 											"width": 487.36669921875,
 											"height": 13,
 											"text": "+actualizarPuntajeCarrera(codigoCarrera: String, puntajeAdmision: int): boolean",
@@ -4640,7 +4623,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1077,
-											"top": 1105,
+											"top": 1090,
 											"width": 487.36669921875,
 											"height": 13,
 											"text": "+actualizarCapacidadCarrera(codigo: String, capacidadAdmision: int): boolean",
@@ -4657,7 +4640,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1077,
-											"top": 1120,
+											"top": 1105,
 											"width": 487.36669921875,
 											"height": 13,
 											"text": "+actualizarFormulario(id: int, estado: TEstadoSolicitante): boolean",
@@ -4674,10 +4657,112 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1077,
-											"top": 1135,
+											"top": 1120,
 											"width": 487.36669921875,
 											"height": 13,
 											"text": "+actualizarFormulario(id: int, fechaExamen: Date, lugar: CentroAplicacion): boolean",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG8MWbBnmIOSI=",
+											"_parent": {
+												"$ref": "AAAAAAF7eRa0/ui2EEM="
+											},
+											"model": {
+												"$ref": "AAAAAAGG8MWa9Xl5W0c="
+											},
+											"font": "Arial;13;0",
+											"left": 1077,
+											"top": 1135,
+											"width": 487.36669921875,
+											"height": 13,
+											"text": "+generarCitas(): boolean",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG8OUslAWfGMM=",
+											"_parent": {
+												"$ref": "AAAAAAF7eRa0/ui2EEM="
+											},
+											"model": {
+												"$ref": "AAAAAAGG8OUsgwWQaqw="
+											},
+											"font": "Arial;13;0",
+											"left": 1077,
+											"top": 1150,
+											"width": 487.36669921875,
+											"height": 13,
+											"text": "+notificarCitas(): Collection<FormularioSolicitante>",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG8VwgXKq2R6k=",
+											"_parent": {
+												"$ref": "AAAAAAF7eRa0/ui2EEM="
+											},
+											"model": {
+												"$ref": "AAAAAAGG8VwgS6qnqIg="
+											},
+											"font": "Arial;13;0",
+											"left": 1077,
+											"top": 1165,
+											"width": 487.36669921875,
+											"height": 13,
+											"text": "+generarDatosExamenRandom(): DatosExamen",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG8Vxp7LGMysQ=",
+											"_parent": {
+												"$ref": "AAAAAAF7eRa0/ui2EEM="
+											},
+											"model": {
+												"$ref": "AAAAAAGG8Vxp3bF9mJo="
+											},
+											"font": "Arial;13;0",
+											"left": 1077,
+											"top": 1180,
+											"width": 487.36669921875,
+											"height": 13,
+											"text": "+generarFechaAleatoria(): Calendar",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG8Vyr/bb5EeM=",
+											"_parent": {
+												"$ref": "AAAAAAF7eRa0/ui2EEM="
+											},
+											"model": {
+												"$ref": "AAAAAAGG8Vyr7rbqBlE="
+											},
+											"font": "Arial;13;0",
+											"left": 1077,
+											"top": 1195,
+											"width": 487.36669921875,
+											"height": 13,
+											"text": "+generarCentroAplicacionAleatorio(): CentroAplicacion",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG8VzyE7xme3g=",
+											"_parent": {
+												"$ref": "AAAAAAF7eRa0/ui2EEM="
+											},
+											"model": {
+												"$ref": "AAAAAAGG8VzyA7xXS+4="
+											},
+											"font": "Arial;13;0",
+											"left": 1077,
+											"top": 1210,
+											"width": 487.36669921875,
+											"height": 13,
+											"text": "+generarNumeroAleatorio(minimo: int, maximo: int): int",
 											"horizontalAlignment": 0
 										}
 									],
@@ -4685,7 +4770,7 @@
 									"left": 1072,
 									"top": 920,
 									"width": 497.36669921875,
-									"height": 233
+									"height": 308
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -11377,7 +11462,7 @@
 											"font": "Arial;13;1",
 											"left": 2605,
 											"top": 839,
-											"width": 186.42431640625,
+											"width": 293.71875,
 											"height": 13,
 											"text": "DatosExamen"
 										},
@@ -11412,7 +11497,7 @@
 									"font": "Arial;13;0",
 									"left": 2600,
 									"top": 832,
-									"width": 196.42431640625,
+									"width": 303.71875,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF7wS9P2dteJDo="
@@ -11449,7 +11534,7 @@
 											"font": "Arial;13;0",
 											"left": 2605,
 											"top": 862,
-											"width": 186.42431640625,
+											"width": 293.71875,
 											"height": 13,
 											"text": "-citaExamen: Date",
 											"horizontalAlignment": 0
@@ -11466,7 +11551,7 @@
 											"font": "Arial;13;0",
 											"left": 2605,
 											"top": 877,
-											"width": 186.42431640625,
+											"width": 293.71875,
 											"height": 13,
 											"text": "-lugarExamen: CentroAplicacion",
 											"horizontalAlignment": 0
@@ -11483,7 +11568,7 @@
 											"font": "Arial;13;0",
 											"left": 2605,
 											"top": 892,
-											"width": 186.42431640625,
+											"width": 293.71875,
 											"height": 13,
 											"text": "-puntajeObtenido: int",
 											"horizontalAlignment": 0
@@ -11492,7 +11577,7 @@
 									"font": "Arial;13;0",
 									"left": 2600,
 									"top": 857,
-									"width": 196.42431640625,
+									"width": 303.71875,
 									"height": 53
 								},
 								{
@@ -11517,9 +11602,26 @@
 											"font": "Arial;13;0",
 											"left": 2605,
 											"top": 915,
-											"width": 186.42431640625,
+											"width": 293.71875,
 											"height": 13,
 											"text": "+DatosExamen()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG8VJF22A/9w0=",
+											"_parent": {
+												"$ref": "AAAAAAF7wS9P2dtjurc="
+											},
+											"model": {
+												"$ref": "AAAAAAGG8VJFuGASjmU="
+											},
+											"font": "Arial;13;0",
+											"left": 2605,
+											"top": 930,
+											"width": 293.71875,
+											"height": 13,
+											"text": "+formatearFechaHora(Calendar fechaHora): String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11533,8 +11635,8 @@
 											},
 											"font": "Arial;13;0",
 											"left": 2605,
-											"top": 930,
-											"width": 186.42431640625,
+											"top": 945,
+											"width": 293.71875,
 											"height": 13,
 											"text": "+getter setter()",
 											"horizontalAlignment": 0
@@ -11543,8 +11645,8 @@
 									"font": "Arial;13;0",
 									"left": 2600,
 									"top": 910,
-									"width": 196.42431640625,
-									"height": 38
+									"width": 303.71875,
+									"height": 53
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -11586,8 +11688,8 @@
 							"containerChangeable": true,
 							"left": 2600,
 							"top": 832,
-							"width": 196.42431640625,
-							"height": 116,
+							"width": 303.71875,
+							"height": 131,
 							"nameCompartment": {
 								"$ref": "AAAAAAF7wS9P2dtd9BQ="
 							},
@@ -12452,8 +12554,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 2857,
-									"top": 865,
+									"left": 2872,
+									"top": 794,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -12473,8 +12575,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 2857,
-									"top": 880,
+									"left": 2887,
+									"top": 794,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -12494,8 +12596,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 2858,
-									"top": 835,
+									"left": 2843,
+									"top": 795,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -12580,8 +12682,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 2820,
-									"top": 864,
+									"left": 2873,
+									"top": 800,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -12600,8 +12702,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 2823,
-									"top": 878,
+									"left": 2886,
+									"top": 797,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -12620,8 +12722,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 2816,
-									"top": 837,
+									"left": 2845,
+									"top": 804,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -12669,7 +12771,7 @@
 							"tail": {
 								"$ref": "AAAAAAF7wTePzAnQy7Q="
 							},
-							"points": "2858:770;2858:856;2795:856",
+							"points": "2858:770;2858:832",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF7wTzpjkMs8MM="
@@ -14761,64 +14863,6 @@
 								},
 								{
 									"_type": "UMLOperation",
-									"_id": "AAAAAAF7p074lpPdZXA=",
-									"_parent": {
-										"$ref": "AAAAAAF7d9zkSWRyWIY="
-									},
-									"name": "generarCitas",
-									"visibility": "private",
-									"parameters": [
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAF7p0+GBZRociY=",
-											"_parent": {
-												"$ref": "AAAAAAF7p074lpPdZXA="
-											},
-											"type": "boolean",
-											"direction": "return"
-										}
-									]
-								},
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAF7wW6mmAM2kOc=",
-									"_parent": {
-										"$ref": "AAAAAAF7d9zkSWRyWIY="
-									},
-									"name": "simulaciónAplicacionExamen",
-									"parameters": [
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAF7wog1zwVNaI0=",
-											"_parent": {
-												"$ref": "AAAAAAF7wW6mmAM2kOc="
-											},
-											"type": "void",
-											"direction": "return"
-										}
-									]
-								},
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAF7woy2ek4dfkM=",
-									"_parent": {
-										"$ref": "AAAAAAF7d9zkSWRyWIY="
-									},
-									"name": "definirSituacionCandidatos",
-									"parameters": [
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAF7woznVE60fWY=",
-											"_parent": {
-												"$ref": "AAAAAAF7woy2ek4dfkM="
-											},
-											"type": "void",
-											"direction": "return"
-										}
-									]
-								},
-								{
-									"_type": "UMLOperation",
 									"_id": "AAAAAAF7wpiRN3PpS24=",
 									"_parent": {
 										"$ref": "AAAAAAF7d9zkSWRyWIY="
@@ -14869,6 +14913,64 @@
 												"$ref": "AAAAAAF7wps6l3603/g="
 											},
 											"type": "Collection<FormularioSolicitante>",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAF7p074lpPdZXA=",
+									"_parent": {
+										"$ref": "AAAAAAF7d9zkSWRyWIY="
+									},
+									"name": "generarCitas",
+									"visibility": "private",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAF7p0+GBZRociY=",
+											"_parent": {
+												"$ref": "AAAAAAF7p074lpPdZXA="
+											},
+											"type": "Collection<FormularioSolicitante>",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAF7wW6mmAM2kOc=",
+									"_parent": {
+										"$ref": "AAAAAAF7d9zkSWRyWIY="
+									},
+									"name": "simulaciónAplicacionExamen",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAF7wog1zwVNaI0=",
+											"_parent": {
+												"$ref": "AAAAAAF7wW6mmAM2kOc="
+											},
+											"type": "void",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAF7woy2ek4dfkM=",
+									"_parent": {
+										"$ref": "AAAAAAF7d9zkSWRyWIY="
+									},
+									"name": "definirSituacionCandidatos",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAF7woznVE60fWY=",
+											"_parent": {
+												"$ref": "AAAAAAF7woy2ek4dfkM="
+											},
+											"type": "void",
 											"direction": "return"
 										}
 									]
@@ -15288,25 +15390,6 @@
 										},
 										{
 											"_type": "UMLOperation",
-											"_id": "AAAAAAGG8MWa9Xl5W0c=",
-											"_parent": {
-												"$ref": "AAAAAAF7eRa0/eit5Qs="
-											},
-											"name": "getFormulariosAnhoActual",
-											"parameters": [
-												{
-													"_type": "UMLParameter",
-													"_id": "AAAAAAGG8MXkv4V77Bg=",
-													"_parent": {
-														"$ref": "AAAAAAGG8MWa9Xl5W0c="
-													},
-													"type": "Collection<FormularioSolicitante>",
-													"direction": "return"
-												}
-											]
-										},
-										{
-											"_type": "UMLOperation",
 											"_id": "AAAAAAF7pkParBwdQ2o=",
 											"_parent": {
 												"$ref": "AAAAAAF7eRa0/eit5Qs="
@@ -15551,6 +15634,142 @@
 														"$ref": "AAAAAAF7wUw+eNOJ0r8="
 													},
 													"type": "boolean",
+													"direction": "return"
+												}
+											]
+										},
+										{
+											"_type": "UMLOperation",
+											"_id": "AAAAAAGG8MWa9Xl5W0c=",
+											"_parent": {
+												"$ref": "AAAAAAF7eRa0/eit5Qs="
+											},
+											"name": "generarCitas",
+											"parameters": [
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAGG8MXkv4V77Bg=",
+													"_parent": {
+														"$ref": "AAAAAAGG8MWa9Xl5W0c="
+													},
+													"type": "boolean",
+													"direction": "return"
+												}
+											]
+										},
+										{
+											"_type": "UMLOperation",
+											"_id": "AAAAAAGG8OUsgwWQaqw=",
+											"_parent": {
+												"$ref": "AAAAAAF7eRa0/eit5Qs="
+											},
+											"name": "notificarCitas",
+											"parameters": [
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAGG8OVtTQfvfVc=",
+													"_parent": {
+														"$ref": "AAAAAAGG8OUsgwWQaqw="
+													},
+													"type": "Collection<FormularioSolicitante>",
+													"direction": "return"
+												}
+											]
+										},
+										{
+											"_type": "UMLOperation",
+											"_id": "AAAAAAGG8VwgS6qnqIg=",
+											"_parent": {
+												"$ref": "AAAAAAF7eRa0/eit5Qs="
+											},
+											"name": "generarDatosExamenRandom",
+											"parameters": [
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAGG8VxIKqzKotQ=",
+													"_parent": {
+														"$ref": "AAAAAAGG8VwgS6qnqIg="
+													},
+													"type": {
+														"$ref": "AAAAAAF7wS9P2dtawdI="
+													},
+													"direction": "return"
+												}
+											]
+										},
+										{
+											"_type": "UMLOperation",
+											"_id": "AAAAAAGG8Vxp3bF9mJo=",
+											"_parent": {
+												"$ref": "AAAAAAF7eRa0/eit5Qs="
+											},
+											"name": "generarFechaAleatoria",
+											"parameters": [
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAGG8VyYFLOgIjg=",
+													"_parent": {
+														"$ref": "AAAAAAGG8Vxp3bF9mJo="
+													},
+													"type": "Calendar",
+													"direction": "return"
+												}
+											]
+										},
+										{
+											"_type": "UMLOperation",
+											"_id": "AAAAAAGG8Vyr7rbqBlE=",
+											"_parent": {
+												"$ref": "AAAAAAF7eRa0/eit5Qs="
+											},
+											"name": "generarCentroAplicacionAleatorio",
+											"parameters": [
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAGG8VzbPrkNBgs=",
+													"_parent": {
+														"$ref": "AAAAAAGG8Vyr7rbqBlE="
+													},
+													"type": {
+														"$ref": "AAAAAAF7wTePvQnO3nI="
+													},
+													"direction": "return"
+												}
+											]
+										},
+										{
+											"_type": "UMLOperation",
+											"_id": "AAAAAAGG8VzyA7xXS+4=",
+											"_parent": {
+												"$ref": "AAAAAAF7eRa0/eit5Qs="
+											},
+											"name": "generarNumeroAleatorio",
+											"parameters": [
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAGG8V1BKL56XMY=",
+													"_parent": {
+														"$ref": "AAAAAAGG8VzyA7xXS+4="
+													},
+													"name": "minimo",
+													"type": "int"
+												},
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAGG8V1BKb57cj4=",
+													"_parent": {
+														"$ref": "AAAAAAGG8VzyA7xXS+4="
+													},
+													"name": "maximo",
+													"type": "int"
+												},
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAGG8V1BKr58m5o=",
+													"_parent": {
+														"$ref": "AAAAAAGG8VzyA7xXS+4="
+													},
+													"type": "int",
 													"direction": "return"
 												}
 											]
@@ -17301,6 +17520,34 @@
 										"$ref": "AAAAAAF7wS9P2dtawdI="
 									},
 									"name": "DatosExamen"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGG8VJFuGASjmU=",
+									"_parent": {
+										"$ref": "AAAAAAF7wS9P2dtawdI="
+									},
+									"name": "formatearFechaHora",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG8VKLWGOe1Dw=",
+											"_parent": {
+												"$ref": "AAAAAAGG8VJFuGASjmU="
+											},
+											"name": "Calendar fechaHora",
+											"type": ""
+										},
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG8VKLWGOf8YM=",
+											"_parent": {
+												"$ref": "AAAAAAGG8VJFuGASjmU="
+											},
+											"type": "String",
+											"direction": "return"
+										}
+									]
 								},
 								{
 									"_type": "UMLOperation",
