@@ -39,7 +39,7 @@ public class Configuracion {
     
     public void cargarConfig() throws ExAdmException {
         try {
-            p.load(new FileReader("src\\param\\EXADM_prop.properties"));
+            p.load(new FileReader("src/param/EXADM_prop.properties"));
         } catch (IOException ex) {
             throw new ExAdmException("PARAM_FILE");
         }
@@ -55,7 +55,7 @@ public class Configuracion {
     
     public boolean guardarProperties(){
         try {
-            p.store(new FileWriter("src\\param\\EXADM_prop.properties"), "Last Update ");
+            p.store(new FileWriter("src/param/EXADM_prop.properties"), "Last Update ");
             return true;
         } catch (IOException ex) {
             return false;

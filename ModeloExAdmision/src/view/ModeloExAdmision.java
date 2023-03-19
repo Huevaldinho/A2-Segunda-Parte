@@ -26,6 +26,7 @@ public class ModeloExAdmision {
      * @param args the command line arguments
      */
     public static Controlador elCtrl = new Controlador();
+    public static boolean estadoSolicitantesDeterminado = false;
 
     public static void demoFormulario() {
         int idSolic = 1000;
@@ -81,7 +82,7 @@ public class ModeloExAdmision {
         System.out.println("Editando Puntaje General de Admisión ");
         elCtrl.editarPuntajeGeneralAdmision(nuevoPuntaje);
 
-        System.out.println("Obteniendo Puntaje General de Admisión "
+        System.out.println("Obteniendo Puntaje General de Admisión: "
                 + elCtrl.getPuntajeGeneralAdmision());
 
         System.out.println("Obteniendo parámetros de forma generica");
@@ -98,15 +99,36 @@ public class ModeloExAdmision {
 
     //Ejercicio 5. Generar y notificar citas.
     public static void definirCitasYNotificar() {
-        System.out.println("\n\n Ejercicio 5. Generar y notificar citas de examen." + "\n");
+        System.out.println("\n\n ------- Ejercicio 5. Generar y notificar citas de examen." + "\n");
         elCtrl.generarCitas();
         elCtrl.notificarCitas();
     }
 
     //Ejercicio 6. Simular aplicacion examen.
     public static void simularAplicacionExamen() {
-        System.out.println("\n\n Ejercicio 6. Simulacion de aplicacion de examen.\n");
+        System.out.println("\n\n ------- Ejercicio 6. Simulacion de aplicacion de examen.\n");
         elCtrl.simulacionAplicacionExamen();
+    }
+    
+    //Ejercicio 7. Determinación de nuevos estados de los solicitantes
+    public static void determinarEstadoSolicitantes(){
+        System.out.println("\n\n ------- Ejercicio 7. Determinación de nuevos estados de los solicitantes.");
+        elCtrl.determinarEstadoSolicitantes();
+        estadoSolicitantesDeterminado = true;
+    }
+    
+    //Ejercicio 8. Visualización de resultados del proceso de admisión para un solicitante.
+    public static void visualizarResultadosParaSolicitante(int idSolicitante){
+        System.out.println("\n\n ------- Ejercicio 8. Visualización de resultados del proceso de admisión para un solicitante.");
+        String resultados = elCtrl.visualizarResultadosParaSolicitante(idSolicitante);
+        System.out.println(resultados);
+    }
+    
+    //Ejercicio 9. Visualización de resultados de la prueba por carrera.
+    public static void visualizarResultadosPorCarrera(String codigoCarrera){
+        System.out.println("\n\n ------- Ejercicio 9. Visualización de resultados de la prueba por carrera.");
+        String resultados = elCtrl.visualizarResultadosPorCarrera(codigoCarrera);
+        System.out.println(resultados);
     }
 
     //Generar formularios aleatorios.
@@ -178,7 +200,17 @@ public class ModeloExAdmision {
         definirCitasYNotificar();
         //Ejercicio 6. Aplicacion del examen de admision.
         simularAplicacionExamen();
-
+        
+        //Ejercicio 7. Determinación de nuevos estados de los solicitantes
+        determinarEstadoSolicitantes();
+        
+        //Ejercicio 8. Visualización de resultados del proceso de admisión para un solicitante.
+        int idSolicitante = 45;
+        visualizarResultadosParaSolicitante(idSolicitante);
+        
+        //Ejercicio 9. 
+        String codigoCarrera = "IC";
+        visualizarResultadosPorCarrera(codigoCarrera);
     }
 
 }
