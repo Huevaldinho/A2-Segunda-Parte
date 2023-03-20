@@ -146,6 +146,10 @@ public class SingletonDAO {
     }
 
     public ArrayList<FormularioSolicitante> getFormularios(TEstadoSolicitante estado) {
+        if (estado==null){
+            return tablaFormularios;
+        }
+        
         ArrayList<FormularioSolicitante> formulariosFiltradosPorEstado = new ArrayList();
         for (int i = 0; i < tablaFormularios.size(); i++) {
             if (tablaFormularios.get(i).getEstado() == estado) {

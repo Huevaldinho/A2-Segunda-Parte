@@ -5,10 +5,12 @@
  */
 package controller;
 
+import controller.DAO.SingletonDAO;
 import java.util.List;
 import model.Carrera;
 import model.FormularioSolicitante;
 import java.util.ArrayList;
+import model.TEstadoSolicitante;
 
 /**
  *
@@ -97,5 +99,32 @@ public class Controlador {
         int maxExamen = getPuntajeGeneralAdmision();
         admFormularios.simularAplicacionExamen(minExamen, maxExamen);
     }
+    
+    /**
+     * Ejercicio 7. Determinar estado de solicitantes.
+     */
+    public void determinarEstadoSolicitantes(){
+        admFormularios.determinacionEstadoSolicitante();
+    }
+     /**
+     * Ejercicio 8. Visualización de resultados del proceso de admisión para un solicitante.
+     * 
+     * @param idSolicitante int: id del Solicitante al desplegar los resultados
+     * 
+     * @return resultados finales.
+     */
+    public String visualizarResultadosParaSolicitante(int idSolicitante){
+        return admFormularios.visualizacionResultadosSolicitante(idSolicitante);
+    }
 
+     /**
+     * Ejercicio 9. Visualización de resultados de la prueba por carrera.
+     * 
+     * @param codigoCarrera String: codigo único por Carrera
+     * 
+     * @return resultados finales
+     */
+    public String visualizarResultadosPorCarrera(String codigoCarrera){
+        return admFormularios.visualizacionResultadosPorCarrera(codigoCarrera);
+    }
 }
