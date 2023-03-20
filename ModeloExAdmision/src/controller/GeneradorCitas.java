@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Random;
 import model.CentroAplicacion;
-import model.DatosExamen;
 import model.FormularioSolicitante;
 import model.TEstadoSolicitante;
 

@@ -1350,7 +1350,7 @@
 											"top": 416,
 											"width": 559.60302734375,
 											"height": 13,
-											"text": "+definirSituacionCandidatos(): void",
+											"text": "+determinacionEstadoSolicitante(): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1386,13 +1386,64 @@
 											"height": 13,
 											"text": "+getFormulariosPorCarrera_Estado(codigoCarrera: String): Collection<FormularioSolicitante>",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG/P98h6ybMdA=",
+											"_parent": {
+												"$ref": "AAAAAAF7d9zkSWR7i5o="
+											},
+											"model": {
+												"$ref": "AAAAAAGG/P98b6yYEbU="
+											},
+											"font": "Arial;13;0",
+											"left": 733,
+											"top": 461,
+											"width": 559.60302734375,
+											"height": 13,
+											"text": "+visualizacionResultadosSolicitante(idSolicitante: int): String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG/P/tv7kSbW4=",
+											"_parent": {
+												"$ref": "AAAAAAF7d9zkSWR7i5o="
+											},
+											"model": {
+												"$ref": "AAAAAAGG/P/ttrkPYcM="
+											},
+											"font": "Arial;13;0",
+											"left": 733,
+											"top": 476,
+											"width": 559.60302734375,
+											"height": 13,
+											"text": "+visualizacionResultadosPorCarrera(codigoCarrera: String): String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG/QFK0+ftJP4=",
+											"_parent": {
+												"$ref": "AAAAAAF7d9zkSWR7i5o="
+											},
+											"model": {
+												"$ref": "AAAAAAGG/QFKzOfqETA="
+											},
+											"font": "Arial;13;0",
+											"left": 733,
+											"top": 491,
+											"width": 559.60302734375,
+											"height": 13,
+											"text": "+visualizarResultadosPorCarreraOrdenadosPorEstado(): String",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 728,
 									"top": 246,
 									"width": 569.60302734375,
-									"height": 218
+									"height": 263
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -7284,7 +7335,43 @@
 											"top": 647,
 											"width": 535,
 											"height": 13,
-											"text": "+P8_verCondicionSolicitud(idSolicitante: int)",
+											"text": "+visualizacionResultadosSolicitante(idSolicitante: int): String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG/QHGlPj6ifQ=",
+											"_parent": {
+												"$ref": "AAAAAAF7pyRtsm8EWug="
+											},
+											"model": {
+												"$ref": "AAAAAAGG/QHGe/jfcu4="
+											},
+											"fillColor": "#d8ffeb",
+											"font": "Arial;13;0",
+											"left": 21,
+											"top": 662,
+											"width": 535,
+											"height": 13,
+											"text": "+visualizacionResultadosPorCarrera(codigoCarrera: String): String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG/QFyv+/K7S4=",
+											"_parent": {
+												"$ref": "AAAAAAF7pyRtsm8EWug="
+											},
+											"model": {
+												"$ref": "AAAAAAGG/QFyo++vJjI="
+											},
+											"fillColor": "#d8ffeb",
+											"font": "Arial;13;0",
+											"left": 21,
+											"top": 677,
+											"width": 535,
+											"height": 13,
+											"text": "+visualizarResultadosPorCarreraOrdenadosPorEstado(): String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -7293,7 +7380,7 @@
 									"left": 16,
 									"top": 627,
 									"width": 545,
-									"height": 38
+									"height": 68
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -8585,7 +8672,7 @@
 											"top": 629,
 											"width": 553.134765625,
 											"height": 13,
-											"text": "+definirEstadoAdmisionCandidatos(): void",
+											"text": "+determinacionEstadoSolicitante(): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -8638,13 +8725,64 @@
 											"height": 13,
 											"text": "+generarNumeroAleatorio(min: int, max: int): int",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG/QBxytJZvTc=",
+											"_parent": {
+												"$ref": "AAAAAAF7pyx4CadD5F0="
+											},
+											"model": {
+												"$ref": "AAAAAAGG/QBxr9I7Oi8="
+											},
+											"font": "Arial;13;0",
+											"left": 1493,
+											"top": 689,
+											"width": 553.134765625,
+											"height": 13,
+											"text": "+visualizacionResultadosSolicitante(idSolicitante: int): String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG/QC1+NgEQz0=",
+											"_parent": {
+												"$ref": "AAAAAAF7pyx4CadD5F0="
+											},
+											"model": {
+												"$ref": "AAAAAAGG/QC149fm0DU="
+											},
+											"font": "Arial;13;0",
+											"left": 1493,
+											"top": 704,
+											"width": 553.134765625,
+											"height": 13,
+											"text": "+visualizacionResultadosPorCarrera(codigoCarrera: String): String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG/QDvON2voJc=",
+											"_parent": {
+												"$ref": "AAAAAAF7pyx4CadD5F0="
+											},
+											"model": {
+												"$ref": "AAAAAAGG/QDvI92R8S8="
+											},
+											"font": "Arial;13;0",
+											"left": 1493,
+											"top": 719,
+											"width": 553.134765625,
+											"height": 13,
+											"text": "+visualizarResultadosPorCarreraOrdenadosPorEstado(): String",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1488,
 									"top": 504,
 									"width": 563.134765625,
-									"height": 188
+									"height": 233
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -9652,7 +9790,7 @@
 											"top": 494,
 											"width": 551,
 											"height": 13,
-											"text": "+P7_definirSituacionSolicitantePostExamen()",
+											"text": "+P7_determinacionEstadoSolicitante()",
 											"horizontalAlignment": 0
 										}
 									],
@@ -14804,7 +14942,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF7d9zkSWRyWIY="
 									},
-									"name": "definirSituacionCandidatos",
+									"name": "determinacionEstadoSolicitante",
 									"parameters": [
 										{
 											"_type": "UMLParameter",
@@ -14869,6 +15007,81 @@
 												"$ref": "AAAAAAF7wps6l3603/g="
 											},
 											"type": "Collection<FormularioSolicitante>",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGG/P98b6yYEbU=",
+									"_parent": {
+										"$ref": "AAAAAAF7d9zkSWRyWIY="
+									},
+									"name": "visualizacionResultadosSolicitante",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/P+wla67dLU=",
+											"_parent": {
+												"$ref": "AAAAAAGG/P98b6yYEbU="
+											},
+											"name": "idSolicitante",
+											"type": "int"
+										},
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/P+wl668l3Y=",
+											"_parent": {
+												"$ref": "AAAAAAGG/P98b6yYEbU="
+											},
+											"type": "String",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGG/P/ttrkPYcM=",
+									"_parent": {
+										"$ref": "AAAAAAF7d9zkSWRyWIY="
+									},
+									"name": "visualizacionResultadosPorCarrera",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/QAaQLuro68=",
+											"_parent": {
+												"$ref": "AAAAAAGG/P/ttrkPYcM="
+											},
+											"name": "codigoCarrera",
+											"type": "String"
+										},
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/QAoQ7xiIho=",
+											"_parent": {
+												"$ref": "AAAAAAGG/P/ttrkPYcM="
+											},
+											"type": "String",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGG/QFKzOfqETA=",
+									"_parent": {
+										"$ref": "AAAAAAF7d9zkSWRyWIY="
+									},
+									"name": "visualizarResultadosPorCarreraOrdenadosPorEstado",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/QFdGOoNYiQ=",
+											"_parent": {
+												"$ref": "AAAAAAGG/QFKzOfqETA="
+											},
+											"type": "String",
 											"direction": "return"
 										}
 									]
@@ -16191,7 +16404,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF7pyx4AKc6bo0="
 									},
-									"name": "definirEstadoAdmisionCandidatos",
+									"name": "determinacionEstadoSolicitante",
 									"parameters": [
 										{
 											"_type": "UMLParameter",
@@ -16297,6 +16510,81 @@
 												"$ref": "AAAAAAGG9crqzJkn8W8="
 											},
 											"type": "int",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGG/QBxr9I7Oi8=",
+									"_parent": {
+										"$ref": "AAAAAAF7pyx4AKc6bo0="
+									},
+									"name": "visualizacionResultadosSolicitante",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/QCfENRef6M=",
+											"_parent": {
+												"$ref": "AAAAAAGG/QBxr9I7Oi8="
+											},
+											"name": "idSolicitante",
+											"type": "int"
+										},
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/QCfEdRff8c=",
+											"_parent": {
+												"$ref": "AAAAAAGG/QBxr9I7Oi8="
+											},
+											"type": "String",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGG/QC149fm0DU=",
+									"_parent": {
+										"$ref": "AAAAAAF7pyx4AKc6bo0="
+									},
+									"name": "visualizacionResultadosPorCarrera",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/QDc/NoJgS8=",
+											"_parent": {
+												"$ref": "AAAAAAGG/QC149fm0DU="
+											},
+											"name": "codigoCarrera",
+											"type": "String"
+										},
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/QDc/doKVl8=",
+											"_parent": {
+												"$ref": "AAAAAAGG/QC149fm0DU="
+											},
+											"type": "String",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGG/QDvI92R8S8=",
+									"_parent": {
+										"$ref": "AAAAAAF7pyx4AKc6bo0="
+									},
+									"name": "visualizarResultadosPorCarreraOrdenadosPorEstado",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/QEA+t+094Q=",
+											"_parent": {
+												"$ref": "AAAAAAGG/QDvI92R8S8="
+											},
+											"type": "String",
 											"direction": "return"
 										}
 									]
@@ -16497,6 +16785,14 @@
 									"type": "PWD"
 								}
 							]
+						},
+						{
+							"_type": "UMLPackage",
+							"_id": "AAAAAAGG/Qb7/bdVUMU=",
+							"_parent": {
+								"$ref": "AAAAAAF7d9f7l2NRqgg="
+							},
+							"name": "Ordenadores"
 						}
 					]
 				},
@@ -17931,7 +18227,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF7pyRtsm77+Nk="
 									},
-									"name": "P8_verCondicionSolicitud",
+									"name": "visualizacionResultadosSolicitante",
 									"parameters": [
 										{
 											"_type": "UMLParameter",
@@ -17941,6 +18237,62 @@
 											},
 											"name": "idSolicitante",
 											"type": "int"
+										},
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/QGbJvUdq4g=",
+											"_parent": {
+												"$ref": "AAAAAAF7wo2RZ1CWh1Q="
+											},
+											"type": "String",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGG/QHGe/jfcu4=",
+									"_parent": {
+										"$ref": "AAAAAAF7pyRtsm77+Nk="
+									},
+									"name": "visualizacionResultadosPorCarrera",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/QHrp/sCfR8=",
+											"_parent": {
+												"$ref": "AAAAAAGG/QHGe/jfcu4="
+											},
+											"name": "codigoCarrera",
+											"type": "String"
+										},
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/QHrqPsDP58=",
+											"_parent": {
+												"$ref": "AAAAAAGG/QHGe/jfcu4="
+											},
+											"type": "String",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGG/QFyo++vJjI=",
+									"_parent": {
+										"$ref": "AAAAAAF7pyRtsm77+Nk="
+									},
+									"name": "visualizarResultadosPorCarreraOrdenadosPorEstado",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG/QGICvHSkk4=",
+											"_parent": {
+												"$ref": "AAAAAAGG/QFyo++vJjI="
+											},
+											"type": "String",
+											"direction": "return"
 										}
 									]
 								}
@@ -18006,7 +18358,99 @@
 									"_parent": {
 										"$ref": "AAAAAAF7pyvqi6SXkog="
 									},
-									"name": "P7_definirSituacionSolicitantePostExamen"
+									"name": "P7_determinacionEstadoSolicitante"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAGG/QP6MA9suCk=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "OrdenarPorIdSolicitud",
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGG/QUKXipUriQ=",
+							"_parent": {
+								"$ref": "AAAAAAGG/QP6MA9suCk="
+							},
+							"name": "compare",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGG/QVVhi2jcn8=",
+									"_parent": {
+										"$ref": "AAAAAAGG/QUKXipUriQ="
+									},
+									"name": "FormularioSolicitante obj1"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGG/QVVhi2kVPc=",
+									"_parent": {
+										"$ref": "AAAAAAGG/QUKXipUriQ="
+									},
+									"name": "FormularioSolicitante obj2"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGG/QVVhi2ltY8=",
+									"_parent": {
+										"$ref": "AAAAAAGG/QUKXipUriQ="
+									},
+									"type": "int",
+									"direction": "return"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAGG/QZozJ1V85M=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "OrdenarPorPuntaje",
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGG/QaN/aG3aGo=",
+							"_parent": {
+								"$ref": "AAAAAAGG/QZozJ1V85M="
+							},
+							"name": "compare",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGG/QakIqcipg0=",
+									"_parent": {
+										"$ref": "AAAAAAGG/QaN/aG3aGo="
+									},
+									"name": "FormularioSolicitante obj1",
+									"type": ""
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGG/QakIqcj6uA=",
+									"_parent": {
+										"$ref": "AAAAAAGG/QaN/aG3aGo="
+									},
+									"name": "FormularioSolicitante obj2",
+									"type": ""
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGG/QakIqckJT8=",
+									"_parent": {
+										"$ref": "AAAAAAGG/QaN/aG3aGo="
+									},
+									"type": "int",
+									"direction": "return"
 								}
 							]
 						}

@@ -5,15 +5,12 @@
  */
 package controller.DAO;
 
-import java.time.Year;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 import model.Carrera;
 import model.CentroAplicacion;
-import model.DatosExamen;
 import model.DireccionPCD;
 import model.FormularioSolicitante;
 import model.Sede;
@@ -146,10 +143,10 @@ public class SingletonDAO {
     }
 
     public ArrayList<FormularioSolicitante> getFormularios(TEstadoSolicitante estado) {
-        if (estado==null){
+        if (estado == null) {
             return tablaFormularios;
         }
-        
+
         ArrayList<FormularioSolicitante> formulariosFiltradosPorEstado = new ArrayList();
         for (int i = 0; i < tablaFormularios.size(); i++) {
             if (tablaFormularios.get(i).getEstado() == estado) {

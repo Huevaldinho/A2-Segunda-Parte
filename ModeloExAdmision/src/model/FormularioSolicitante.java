@@ -12,7 +12,7 @@ import java.util.Calendar;
  *
  * @author ersolano
  *
- */ // implements Comparable<FormularioSolicitante>
+ */
 public class FormularioSolicitante {
 
     private static int proxFormulario
@@ -169,13 +169,6 @@ public class FormularioSolicitante {
         return simpleDateFormat.format(fecha.getTime());
     }
 
-//    @Override
-//    public int compareTo(FormularioSolicitante comparar) {
-//        int comparadorPuntaje = ((FormularioSolicitante) comparar).idSolic;
-//
-//        return this.idSolic - comparadorPuntaje;
-//    }
-
     @Override
     public String toString() {
         return "FormularioSolicitante:\n "
@@ -193,5 +186,4 @@ public class FormularioSolicitante {
                 + "estado=" + estado + "\n"
                 + "detalleExamen=" + detalleExamen + '\n';
     }
-
 }
