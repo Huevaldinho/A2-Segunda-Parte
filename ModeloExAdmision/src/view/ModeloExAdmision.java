@@ -142,6 +142,7 @@ public class ModeloExAdmision {
             System.out.println(resultado ? "Formulario registrado y es el numero: "
                     + elCtrl.getFormulario(idSolic) : "No pudo registrar el formulario");
         }
+
     }
 
     /**

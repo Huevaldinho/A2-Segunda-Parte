@@ -4665,19 +4665,19 @@
 										},
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAGG8jOSZxkcvsA=",
+											"_id": "AAAAAAGG9ZnVpEX1NE8=",
 											"_parent": {
 												"$ref": "AAAAAAF7eRa0/ui2EEM="
 											},
 											"model": {
-												"$ref": "AAAAAAGG8jOSUhkNZNw="
+												"$ref": "AAAAAAGG9ZnVe0Xm2nc="
 											},
 											"font": "Arial;13;0",
 											"left": 1077,
 											"top": 1127,
 											"width": 487.36669921875,
 											"height": 13,
-											"text": "+getCentrosAplicacion(): Collection<CentroAplicacion>",
+											"text": "+setNotaExamenFormulario(idFormulario: int, int: nota): boolean",
 											"horizontalAlignment": 0
 										}
 									],
@@ -8621,13 +8621,30 @@
 											"height": 13,
 											"text": "+getDesgloseCandidatosPorEstado(unaCarrera: Carrera): Collection<FormularioSolicitante>",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGG9crq55lFFXk=",
+											"_parent": {
+												"$ref": "AAAAAAF7pyx4CadD5F0="
+											},
+											"model": {
+												"$ref": "AAAAAAGG9crqzJkn8W8="
+											},
+											"font": "Arial;13;0",
+											"left": 1493,
+											"top": 674,
+											"width": 553.134765625,
+											"height": 13,
+											"text": "+generarNumeroAleatorio(min: int, max: int): int",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1488,
 									"top": 504,
 									"width": 563.134765625,
-									"height": 173
+									"height": 188
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -15521,19 +15538,37 @@
 										},
 										{
 											"_type": "UMLOperation",
-											"_id": "AAAAAAGG8jOSUhkNZNw=",
+											"_id": "AAAAAAGG9ZnVe0Xm2nc=",
 											"_parent": {
 												"$ref": "AAAAAAF7eRa0/eit5Qs="
 											},
-											"name": "getCentrosAplicacion",
+											"name": "setNotaExamenFormulario",
 											"parameters": [
 												{
 													"_type": "UMLParameter",
-													"_id": "AAAAAAGG8jQa4xswrJE=",
+													"_id": "AAAAAAGG9ZpudkgJ+Fs=",
 													"_parent": {
-														"$ref": "AAAAAAGG8jOSUhkNZNw="
+														"$ref": "AAAAAAGG9ZnVe0Xm2nc="
 													},
-													"type": "Collection<CentroAplicacion>",
+													"name": "idFormulario",
+													"type": "int"
+												},
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAGG9Zpud0gKSAw=",
+													"_parent": {
+														"$ref": "AAAAAAGG9ZnVe0Xm2nc="
+													},
+													"name": "int",
+													"type": "nota"
+												},
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAGG9ZpueEgLSdU=",
+													"_parent": {
+														"$ref": "AAAAAAGG9ZnVe0Xm2nc="
+													},
+													"type": "boolean",
 													"direction": "return"
 												}
 											]
@@ -16225,6 +16260,43 @@
 												"$ref": "AAAAAAF7wp47JJguyDI="
 											},
 											"type": "Collection<FormularioSolicitante>",
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGG9crqzJkn8W8=",
+									"_parent": {
+										"$ref": "AAAAAAF7pyx4AKc6bo0="
+									},
+									"name": "generarNumeroAleatorio",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG9ctDWJtKBEY=",
+											"_parent": {
+												"$ref": "AAAAAAGG9crqzJkn8W8="
+											},
+											"name": "min",
+											"type": "int"
+										},
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG9ctDWZtL0fc=",
+											"_parent": {
+												"$ref": "AAAAAAGG9crqzJkn8W8="
+											},
+											"name": "max",
+											"type": "int"
+										},
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGG9ctDWZtMKjQ=",
+											"_parent": {
+												"$ref": "AAAAAAGG9crqzJkn8W8="
+											},
+											"type": "int",
 											"direction": "return"
 										}
 									]
