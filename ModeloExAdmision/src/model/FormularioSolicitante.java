@@ -11,11 +11,13 @@ import java.util.Calendar;
 /**
  *
  * @author ersolano
- */
+ *
+ */ // implements Comparable<FormularioSolicitante>
 public class FormularioSolicitante {
-    private static int proxFormulario = 
-            (int) (Configuracion.getInstance().getParam("CONSECUTIVO_FORM", Integer.class));
-     
+
+    private static int proxFormulario
+            = (int) (Configuracion.getInstance().getParam("CONSECUTIVO_FORM", Integer.class));
+
     private int numero;
     private Calendar fecha;
     private int idSolic;
@@ -24,7 +26,7 @@ public class FormularioSolicitante {
     private String celularSolic;
     private String colegioSolic;
     private String detalleDirSolic;
-    private DireccionPCD dirSolicPCD; 
+    private DireccionPCD dirSolicPCD;
 
     private Carrera carreraSolic;
     private TEstadoSolicitante estado;
@@ -35,16 +37,16 @@ public class FormularioSolicitante {
         this.fecha = Calendar.getInstance();
         //aquí se crean los espacios que deberían llenarse por aparte
         this.estado = TEstadoSolicitante.SOLICITANTE;
-        this.detalleExamen = new DatosExamen();    
+        this.detalleExamen = new DatosExamen();
     }
 
-    public FormularioSolicitante(int idSolic, String nombreSolic, 
-                                 String celSolic, String correoSolic, 
-                                 String detalleResidencia, String colegioSolic, 
-                                 DireccionPCD direccionPCD, Carrera carreraSolic) {
+    public FormularioSolicitante(int idSolic, String nombreSolic,
+            String celSolic, String correoSolic,
+            String detalleResidencia, String colegioSolic,
+            DireccionPCD direccionPCD, Carrera carreraSolic) {
         this.numero = getProximo();
         this.fecha = Calendar.getInstance();
-        
+
         this.idSolic = idSolic;
         this.nombreSolic = nombreSolic;
         this.celularSolic = celSolic;
@@ -53,18 +55,17 @@ public class FormularioSolicitante {
         this.detalleDirSolic = detalleResidencia;
         this.dirSolicPCD = direccionPCD;
         this.carreraSolic = carreraSolic;
-        
+
         this.estado = TEstadoSolicitante.SOLICITANTE;
         this.detalleExamen = new DatosExamen();
     }
-    
-    
-    private int getProximo(){
+
+    private int getProximo() {
         int proximo = proxFormulario++;
         Configuracion.getInstance().setParam("CONSECUTIVO_FORM", proxFormulario);
         Configuracion.getInstance().guardarProperties();
         return proximo;
-    }    
+    }
 
     public int getNumero() {
         return numero;
@@ -138,7 +139,6 @@ public class FormularioSolicitante {
         return dirSolicPCD;
     }
 
-    
     public Carrera getCarreraSolic() {
         return carreraSolic;
     }
@@ -163,31 +163,35 @@ public class FormularioSolicitante {
         this.detalleExamen = detalleExamen;
     }
 
-    private String formatoFecha(Calendar fecha){
+    private String formatoFecha(Calendar fecha) {
         String pattern = "dd-MM-yyyy";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
         return simpleDateFormat.format(fecha.getTime());
     }
-    
+
+//    @Override
+//    public int compareTo(FormularioSolicitante comparar) {
+//        int comparadorPuntaje = ((FormularioSolicitante) comparar).idSolic;
+//
+//        return this.idSolic - comparadorPuntaje;
+//    }
+
     @Override
     public String toString() {
-        return "FormularioSolicitante:\n " + 
-                "numero=" + numero + "\n" +
-                "fecha=" + formatoFecha(fecha) + "\n" + 
-                "idSolic=" + idSolic + "\n" + 
-                "nombreSolic=" + nombreSolic + "\n" + 
-                "correoSolic=" + correoSolic +  "\n" +
-                "celularSolic=" + celularSolic +  "\n" +
-                "colegioSolic=" + colegioSolic +  "\n" +
-                "dirSolic=" + dirSolicPCD + "\n" +
-                "detalleDirSolic=" + detalleDirSolic + "\n" + 
-                "carreraSolic=" + carreraSolic.getCodigo()+"-"+
-                                  carreraSolic.getSede().getCodigo() +  "\n" +
-                "estado=" + estado +  "\n" +
-                "detalleExamen=" + detalleExamen + '\n';
+        return "FormularioSolicitante:\n "
+                + "numero=" + numero + "\n"
+                + "fecha=" + formatoFecha(fecha) + "\n"
+                + "idSolic=" + idSolic + "\n"
+                + "nombreSolic=" + nombreSolic + "\n"
+                + "correoSolic=" + correoSolic + "\n"
+                + "celularSolic=" + celularSolic + "\n"
+                + "colegioSolic=" + colegioSolic + "\n"
+                + "dirSolic=" + dirSolicPCD + "\n"
+                + "detalleDirSolic=" + detalleDirSolic + "\n"
+                + "carreraSolic=" + carreraSolic.getCodigo() + "-"
+                + carreraSolic.getSede().getCodigo() + "\n"
+                + "estado=" + estado + "\n"
+                + "detalleExamen=" + detalleExamen + '\n';
     }
-    
-    
-    
-    
+
 }

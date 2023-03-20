@@ -109,25 +109,38 @@ public class ModeloExAdmision {
         System.out.println("\n\n ------- Ejercicio 6. Simulacion de aplicacion de examen.\n");
         elCtrl.simulacionAplicacionExamen();
     }
-    
+
     //Ejercicio 7. Determinación de nuevos estados de los solicitantes
-    public static void determinarEstadoSolicitantes(){
+    public static void determinarEstadoSolicitantes() {
         System.out.println("\n\n ------- Ejercicio 7. Determinación de nuevos estados de los solicitantes.");
         elCtrl.determinarEstadoSolicitantes();
         estadoSolicitantesDeterminado = true;
     }
-    
+
     //Ejercicio 8. Visualización de resultados del proceso de admisión para un solicitante.
-    public static void visualizarResultadosParaSolicitante(int idSolicitante){
+    public static void visualizarResultadosParaSolicitante(int idSolicitante) {
         System.out.println("\n\n ------- Ejercicio 8. Visualización de resultados del proceso de admisión para un solicitante.");
         String resultados = elCtrl.visualizarResultadosParaSolicitante(idSolicitante);
         System.out.println(resultados);
     }
-    
+
     //Ejercicio 9. Visualización de resultados de la prueba por carrera.
-    public static void visualizarResultadosPorCarrera(String codigoCarrera){
+    public static void visualizarResultadosPorCarrera(String codigoCarrera) {
         System.out.println("\n\n ------- Ejercicio 9. Visualización de resultados de la prueba por carrera.");
         String resultados = elCtrl.visualizarResultadosPorCarrera(codigoCarrera);
+        System.out.println(resultados);
+    }
+
+    //Ejercicio 10. Visualización de resultados de la prueba por carrera en orden de estado.
+    public static void visualizarResultadosPorCarreraOrdenadosPorEstado() {
+        /*
+        10.  Visualización de los resultados para cada carrera-sede de
+     * la institución. En orden de estado ordenados desc por puntaje.
+         */
+        System.out.println("\n\n ------- Ejercicio 10. Visualización de los resultados para cada carrera-sede de\n"
+                + "     * la institución. En orden de estado ordenados desc por puntaje.");
+
+        String resultados = elCtrl.visualizarResultadosPorCarreraOrdenadosPorEstado();
         System.out.println(resultados);
     }
 
@@ -201,17 +214,20 @@ public class ModeloExAdmision {
         definirCitasYNotificar();
         //Ejercicio 6. Aplicacion del examen de admision.
         simularAplicacionExamen();
-        
+
         //Ejercicio 7. Determinación de nuevos estados de los solicitantes
         determinarEstadoSolicitantes();
-        
+
         //Ejercicio 8. Visualización de resultados del proceso de admisión para un solicitante.
         int idSolicitante = 45;
         visualizarResultadosParaSolicitante(idSolicitante);
-        
-        //Ejercicio 9. 
+
+        //Ejercicio 9. Visualización de resultados de la prueba por carrera. Mostrando por identificación del estudiante.
         String codigoCarrera = "IC";
         visualizarResultadosPorCarrera(codigoCarrera);
+
+        //Ejercicio 10. Visualización de resultados de la prueba por carrera en orden de estado.
+        visualizarResultadosPorCarreraOrdenadosPorEstado();
     }
 
 }

@@ -99,32 +99,44 @@ public class Controlador {
         int maxExamen = getPuntajeGeneralAdmision();
         admFormularios.simularAplicacionExamen(minExamen, maxExamen);
     }
-    
+
     /**
      * Ejercicio 7. Determinar estado de solicitantes.
      */
-    public void determinarEstadoSolicitantes(){
+    public void determinarEstadoSolicitantes() {
         admFormularios.determinacionEstadoSolicitante();
     }
-     /**
-     * Ejercicio 8. Visualización de resultados del proceso de admisión para un solicitante.
-     * 
+
+    /**
+     * Ejercicio 8. Visualización de resultados del proceso de admisión para un
+     * solicitante.
+     *
      * @param idSolicitante int: id del Solicitante al desplegar los resultados
-     * 
+     *
      * @return resultados finales.
      */
-    public String visualizarResultadosParaSolicitante(int idSolicitante){
+    public String visualizarResultadosParaSolicitante(int idSolicitante) {
         return admFormularios.visualizacionResultadosSolicitante(idSolicitante);
     }
 
-     /**
+    /**
      * Ejercicio 9. Visualización de resultados de la prueba por carrera.
-     * 
+     *
      * @param codigoCarrera String: codigo único por Carrera
-     * 
+     *
      * @return resultados finales
      */
-    public String visualizarResultadosPorCarrera(String codigoCarrera){
+    public String visualizarResultadosPorCarrera(String codigoCarrera) {
         return admFormularios.visualizacionResultadosPorCarrera(codigoCarrera);
+    }
+
+    /**
+     * Ejercicio 10. Visualización de los resultados para cada carrera-sede de
+     * la institución. En orden de estado ordenados desc por puntaje.
+     *
+     * @return resultados de consulta.
+     */
+    public String visualizarResultadosPorCarreraOrdenadosPorEstado() {
+        return admFormularios.visualizarResultadosPorCarreraOrdenadosPorEstado();
     }
 }
